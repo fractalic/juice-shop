@@ -1,4 +1,4 @@
-# References
+# References [![Mentioned in Awesome AppSec](https://awesome.re/mentioned-badge.svg)](https://github.com/paragonie/awesome-appsec)
 
 Did you write a blog post, magazine article or do a podcast about or
 mentioning OWASP Juice Shop? Add it to this file and open a PR! The same
@@ -26,7 +26,10 @@ where this project was mentioned or used!
 ### Pod- & Webcasts
 
 * [Application Security Podcast](https://securityjourney.com/application-security-podcast):
-  * 5 minute AppSec: [Björn Kimminich — JuiceShop](https://www.securityjourney.com/blog/bjorn-kimminich-juiceship-5-minute-appsec/)
+  * Episode 5.9:
+    [The new JuiceShop, GSOC, and Open Security Summit](https://securityjourney.com/blog/bjorn-kimminich-the-new-juiceshop-gsoc-and-open-security-summit/)
+  * 5 minute AppSec:
+    [Björn Kimminich — JuiceShop](https://www.securityjourney.com/blog/bjorn-kimminich-juiceship-5-minute-appsec/)
   * Episode 4.27:
     [Season 4 Finale (S04E27)](https://www.securityjourney.com/blog/season-4-finale-s04e27/)
     (snippet from
@@ -99,6 +102,10 @@ where this project was mentioned or used!
 
 ### Blogs & Articles
 
+* Blog post on [klarsen.net - A Maker's Blog](https://klarsen.net):
+  [OWASP Juice Shop SQLi](https://klarsen.net/python/owasp-juice-shop-sqli/)
+* White paper by Kelley Bryant:
+  [OWASP: Application Security's Best Friend](https://drive.google.com/file/d/0ByCGDrCX7bx7dnB0TGJJSnNzRmhtUUE4U1RfR3d0YVl4RHFr/view)
 * Article (:es:) on Medium by
   [Elzer Pineda](https://medium.com/@elzerjp):
   [Null Byte Attack Juice Shop y algo mas!!](https://medium.com/@elzerjp/null-byte-attack-juice-shop-y-algo-mas-2c6d271b2fd5)
@@ -191,7 +198,7 @@ where this project was mentioned or used!
   [Open Security Summit 2019](https://github.com/OpenSecuritySummit/oss2019),
   03.-07.06.2019
 * Student projects from
-  [Google Suummer of Code 2018](https://summerofcode.withgoogle.com/archive/2018/projects)
+  [Google Summer of Code 2018](https://summerofcode.withgoogle.com/archive/2018/projects)
   * [OWASP Juice Shop : Challenge Pack 2018](https://summerofcode.withgoogle.com/archive/2018/projects/6267528737193984)
     by Shoeb Patel (mentored by Jannik Hollenbach and Timo Pagel)
   * [OWASP Juice Shop : Frontend Technology Update](https://summerofcode.withgoogle.com/archive/2018/projects/6636660909408256)
@@ -209,8 +216,29 @@ where this project was mentioned or used!
 
 ## Conference and Meetup Appearances
 
+#### Upcoming
+
+* [Elbsides vs. Juice Shop](https://2019.elbsides.de/programme.html#elbsides-vs-juice-shop)
+  workshop with Björn Kimminich,
+  [Elbsides 2019](https://2019.elbsides.de), 16.09.2019
+* [Juice Shop](https://globalappsecamsterdam2019.sched.com/event/U84e/juice-shop)
+  by Björn Kimminich, Project Showcase track of the
+  [Global AppSec Amsterdam 2019](https://ams.globalappsec.org/),
+  26.09.2019
+* [OWASP Juice Shop: The ultimate All Vuln WebApp](https://www.alldaydevops.com/addo-speakers/bj%C3%B6rn-kimminich)
+  by Björn Kimminich, [All Day DevOps](https://www.alldaydevops.com/),
+  06.11.2019
+* [S' OWASP Saft-Lädeli / The OWASP Juice Shop](https://www.meetup.com/de-DE/OWASPSwitzerland/events/264422942/)
+  by Björn Kimminich,
+  [OWASP Switzerland Chapter Meeting](https://www.meetup.com/de-DE/OWASPSwitzerland/),
+  18.11.2019
+
 #### 2019
 
+* [Introduction to OWASP Juice Shop](https://bsidesmcr2019.sched.com/event/Sw0q/introduction-to-owasp-juice-shop)
+  by Tim Corless-Carter,
+  [BSidesMCR 2019](https://www.bsidesmcr.org.uk/), 29.08.2019
+  ([Youtube](https://youtu.be/hlgp7oeVpac) :godmode:)
 * [JavaScript-Security: "Pwn" den Juice Shop](https://www.enterjs.de/single?id=7685&javascript-security%3A-%22pwn%22-den-juice-shop)
   workshop with Timo Pagel & Björn Kimminich,
   [enterJS 2019](https://www.enterjs.de/2019/), 25.06.2019
@@ -226,7 +254,7 @@ where this project was mentioned or used!
   [Pixels Camp v3.0](https://pixels.camp), 21.03.2019
 * [OWASP Juice Shop - First you :-D :-D then you :,-(](https://github.com/PixelsCamp/talks/blob/master/2019/owasp-juice-shop_bjoern-kimminich.md)
   by Björn Kimminich, [Pixels Camp v3.0](https://pixels.camp),
-  21.03.2019
+  21.03.2019 ([Youtube](https://youtu.be/v9qrAK_iBa0) :bulb:)
 * [News from the fruit press: Juice Shop 8](https://www.meetup.com/de-DE/OWASP-Hamburg-Stammtisch/events/258185324/)
   by Björn Kimminich,
   [39. OWASP Stammtisch Hamburg](https://www.meetup.com/de-DE/OWASP-Hamburg-Stammtisch),

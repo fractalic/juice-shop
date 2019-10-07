@@ -3,6 +3,11 @@ application:
   favicon: favicon_ctf.ico
   showChallengeHints: false
   showVersionNumber: false
-  gitHubRibbon: false
+  showHackingInstructor: false
+  showGitHubLinks: false
+  deluxePage:
+    deluxeDeliveryImage: delivery_ctf.png
+  welcomeBanner:
+    showOnFirstStart: false
 ctf:
   showFlagsInNotifications: true

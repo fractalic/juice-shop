@@ -18,8 +18,8 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 describe('ComplaintComponent', () => {
   let component: ComplaintComponent
   let fixture: ComponentFixture<ComplaintComponent>
-  let userService
-  let complaintService
+  let userService: any
+  let complaintService: any
 
   beforeEach(async(() => {
 
@@ -111,16 +111,15 @@ describe('ComplaintComponent', () => {
 
   it('should display support message with #id and reset complaint form on saving complaint', () => {
     complaintService.save.and.returnValue(of({ id: '42' }))
-    component.uploader.queue[0] = null
+    component.uploader.queue[0] = null as unknown as FileItem
     component.save()
     expect(component.confirmation).toBe('Customer support will get in touch with you soon! Your complaint reference is #42')
   })
 
-  xit('should begin uploading file if it has been added on saving', inject([ HttpTestingController], fakeAsync((httpMock: HttpTestingController) => {
-    // TODO - enable mocking http responses from /file-upload
+  it('should begin uploading file if it has been added on saving', fakeAsync(() => {
     component.uploader.queue[0] = new FileItem(component.uploader, new File([''], 'file.pdf', { 'type': 'application/pdf' }),{})
-    spyOn(component.uploader.queue[0],'upload').and.callFake(() => console.log('Test'))
+    spyOn(component.uploader.queue[0],'upload')
     component.save()
     expect(component.uploader.queue[0].upload).toHaveBeenCalled()
-  })))
+  }))
 })

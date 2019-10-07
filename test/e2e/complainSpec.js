@@ -39,7 +39,7 @@ describe('/#/complain', () => {
       browser.waitForAngularEnabled(false)
       browser.executeScript(() => {
         const data = new FormData()
-        const blob = new Blob([ 'test' ], { type: 'application/x-msdownload' })
+        const blob = new Blob(['test'], { type: 'application/x-msdownload' })
         data.append('file', blob, 'invalidTypeForClient.exe')
 
         const request = new XMLHttpRequest()
@@ -76,7 +76,7 @@ describe('/#/complain', () => {
       })
 
       afterAll(() => {
-        protractor.expect.challengeSolved({ challenge: 'XXE Tier 1' })
+        protractor.expect.challengeSolved({ challenge: 'XXE Data Access' })
       })
     })
 
@@ -94,7 +94,7 @@ describe('/#/complain', () => {
       })
 
       afterAll(() => {
-        protractor.expect.challengeSolved({ challenge: 'XXE Tier 2' })
+        protractor.expect.challengeSolved({ challenge: 'XXE DoS' })
       })
     })
   }
@@ -116,7 +116,7 @@ describe('/#/complain', () => {
       submitButton.click()
       browser.waitForAngularEnabled(false)
       browser.get('/promotion')
-      browser.wait(EC.alertIsPresent(), 5000, "'xss' alert is not present")
+      browser.wait(EC.alertIsPresent(), 5000, "'xss' alert is not present on /promotion")
       browser.switchTo().alert().then(alert => {
         expect(alert.getText()).toEqual('xss')
         alert.accept()
@@ -125,6 +125,6 @@ describe('/#/complain', () => {
       browser.driver.sleep(5000)
       browser.waitForAngularEnabled(true)
     })
-    protractor.expect.challengeSolved({ challenge: 'XSS Tier 6' })
+    protractor.expect.challengeSolved({ challenge: 'Video XSS' })
   })
 })

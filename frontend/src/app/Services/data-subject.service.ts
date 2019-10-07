@@ -10,14 +10,16 @@ import { catchError, map } from 'rxjs/operators'
 export class DataSubjectService {
 
   private hostServer = environment.hostServer
-  private host = this.hostServer + '/rest/data-subject'
+  private host = this.hostServer + '/rest/user'
 
   constructor (private http: HttpClient) { }
 
-  deactivate () {
-    return this.http.get(this.host).pipe(
-      map((response: any) => response),
-      catchError(error => { throw error })
+  erase (params: any) {
+    return this.http.post(this.host + '/erasure-request', params).pipe(catchError(error => { throw error })
     )
+  }
+
+  dataExport (params: any) {
+    return this.http.post(this.host + '/data-export', params).pipe(catchError((err) => { throw err }))
   }
 }
